@@ -6,32 +6,37 @@
     <title>JS Weather</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="search-box">
         <input type="text" name="city-name" id="search-bar" placeholder="Enter City here">
         <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
-    <div class="contianer">
+    <div class="container">
         <h1 class="city-name">City Name</h1>
         <h3 class="date">date now</h3>
         <img src="#" alt="" class="weather-img">
         <h1 class="temp">temp</h1><span>°C</span>
         <p class="weather-desc">cloudy</p>
         <div class="humidity">
-            <img src="" alt="" class="humidity-img">
+            <img src="images/humidity.png" alt="" class="humidity-img">
             <span class="humidity-data"><h4 class="humidity">55</h4><h4>%</h4></span>
             <p>Humidity</p>
         </div>
         <div class="wind-speed">
-            <img src="" alt="" class="humidity-img">
+            <img src="images/airspeed.png" alt="" class="humidity-img">
             <span class="wind-speed-data"><h4 class="wind-speed">18</h4><h4>Km/h</h4></span>
             <p>Wind Speed</p>
         </div>
 
 
     </div>
-
+    <footer>
+        <span><p class="foot">made with❤️by <a href="https://www.linkedin.com/in/saikat-das-698a5b2a2/" target="_blank">@saikat</a></p></span>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
