@@ -12,25 +12,35 @@
 </head>
 <body>
     <div class="search-box">
-        <input type="text" name="city-name" id="search-bar" placeholder="Enter City here">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" name="city-name" id="search-bar" placeholder="Enter City here...">
         <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     <div class="container">
-        <h1 class="city-name">City Name</h1>
-        <h3 class="date">date now</h3>
-        <img src="#" alt="" class="weather-img">
-        <h1 class="temp">temp</h1><span>°C</span>
+        <h1 class="city-name">Bangalore</h1>
+        <h3 class="date">06.01.2006</h3>
+        <img src="images/brokenclouds.png" alt="" class="weather-img">
+        <div class="temp-box">
+            <h1 class="temp">30</h1><span>°C</span>
+        </div>
         <p class="weather-desc">cloudy</p>
-        <div class="weather-data"><div class="humidity">
-            <img src="images/humidity.png" alt="" class="humidity-img">
-            <span class="humidity-data"><h4 class="humidity">55</h4><h4>%</h4></span>
-            <p>Humidity</p>
-        </div>
-        <div class="wind-speed">
-            <img src="images/airspeed.png" alt="" class="humidity-img">
-            <span class="wind-speed-data"><h4 class="wind-speed">18</h4><h4>Km/h</h4></span>
-            <p>Wind Speed</p>
-        </div>
+        <div class="weather-data">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="humidity-data">
+                    <span>
+                        <h4 class="humidity-text">55%</h4>
+                    <p>Humidity</p>
+                    </span>
+                </div>
+            </div>
+            <div class="wind-speed">
+                <i class="fa-solid fa-wind"></i>
+                <span class="wind-speed-data">
+                    <h4 class="wind-speed-text">18Km/h</h4>
+                <p>Wind Speed</p>
+                </span>
+            </div>
         </div>
 
 
