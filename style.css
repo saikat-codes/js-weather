@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #f1f1f1;
 }
 
 body {
@@ -19,7 +20,26 @@ body {
 
 #search-bar {
     width: 200px;
-    font-size: 20px;
+    font-size: 17px;
+    border: none;
+    padding: 6px;
+    margin-right: -4px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.079);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    font-family: 'Jetbrains mono';
+}
+
+.search-btn {
+    font-size: 19.5px;
+    padding: 6px;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.079);
 }
 
 .container {
@@ -28,4 +48,9 @@ body {
     width: 450px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.079);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 }
