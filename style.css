@@ -109,6 +109,7 @@ body {
 .temp {
     font-family: 'Inter','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 55px;
+    margin-left: 30px;
 }
 
 .weather-desc {
@@ -116,8 +117,9 @@ body {
     text-transform: capitalize;
     font-weight: 450;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 45px;
+    letter-spacing: 1px;
 }
 
 .weather-data {
@@ -205,4 +207,41 @@ footer span p a {
 footer span p a:hover {
     text-decoration: underline;
     text-shadow: 1px 1px 10px #000000;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 530px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #search-bar {
+        width: 95vw;
+        margin-right: -12px;
+    }
+
+    .container {
+        width: 96vw;
+    }
+
+    .search-btn {
+    position: relative;
+    right: 23px;
+    top: -1px;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
 }
