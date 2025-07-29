@@ -1,9 +1,10 @@
 const apiKey = 'da9230bd97fb338a43a5fd7d86cd2c5b'
-const cityName = document.querySelector("#search-bar").value
+
 const searchBtn = document.querySelector('.search-btn')
 const weatherImg = document.querySelector('.weather-img')
 
 searchBtn.addEventListener('click', () => {
+    const cityName = document.querySelector("#search-bar").value
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
     .then((response) => {
         if (response.status !== 200) {
