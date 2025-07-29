@@ -17,7 +17,7 @@ body {
 
 .search-box {
     display: flex;
-    width: 350px;
+    width: 375px;
     align-items: center;
 }
 
@@ -26,7 +26,7 @@ body {
     position: relative;
     font-family: 'Jetbrains Mono','Courier New', Courier, monospace;
     font-size: 18px;
-    padding: 7px;
+    padding: 8px;
     background-color: rgba(29, 28, 28, 0.077);
     backdrop-filter: blur(10px); 
     outline: none;
@@ -100,7 +100,7 @@ body {
     margin-top: 5px;
 }
 
-.temp-box span {
+.temp-box p {
     font-size: 25px;
     font-family: 'Jetbrains mono','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 600;
@@ -121,6 +121,14 @@ body {
     margin-top: 5px;
     margin-bottom: 45px;
     letter-spacing: 1px;
+}
+
+.more-desc {
+    font-family: 'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 2em;
 }
 
 .weather-data {
@@ -267,6 +275,8 @@ footer span p a:hover {
     justify-content: center;  
     margin-top: 1.5em;
     z-index: 1000;
+    position: absolute;
+    top: 355px;
 }
 
 

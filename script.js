@@ -7,8 +7,7 @@ searchBtn.addEventListener('click', () => {
     const cityName = document.querySelector("#search-bar").value
     const container = document.querySelector('.container');
     const input = document.getElementById('search-bar');
-    const errorBox = document.querySelector('.error-box');
-
+    
     input.placeholder = cityName; 
 
     
@@ -16,23 +15,40 @@ searchBtn.addEventListener('click', () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
     .then((response) => {
 
-        if (response.status === 404 || response.status === 400) {
-        errorBox.classList.remove('hide');
-        container.classList.add('none');
-        } else {
-         container.classList.remove('none');
-         errorBox.classList.add('hide')
-        }
+        container.classList.remove('none')
+        // if (response.status === 404 || response.status === 400) {
+          
+        // } else {
+         
+        // }
         console.log(response);
         
         return response.json();
     })
     .then((response) => {
+        console.log(response);
 
-        // console.log(response);
-        let date = +response.dt;
+        if (response.cod === '404' || response.cod === '400') {
+            weatherImg.src = 'images/error-new.png'
+            document.querySelector('.temp').innerHTML = 'Oops!'
+            document.querySelector('#unit-temp').style.visibility = 'hidden'
+            document.querySelector('.weather-desc').innerHTML = 'Location not Found.'
+            document.querySelector('.more-desc').innerHTML = 'Search something else...'
+            document.querySelector('.city-name').innerHTML = ''
+            document.querySelector('.date').innerHTML = ''
+            document.querySelector('.humidity-text').innerHTML = '--%'
+            document.querySelector('.wind-speed-text').innerHTML = '-- Km/h'
+
+
+
+
+
+        } else {
+            let date = +response.dt;
         const currentDate = new Date( date * 1000);        
         
+        document.querySelector('.more-desc').innerHTML = ''
+        document.querySelector('#unit-temp').style.visibility = 'visible'
         document.querySelector('.city-name').innerHTML = response.name
         document.querySelector('.temp').innerHTML = Math.round(response.main.temp)
         document.querySelector('.date').innerHTML = currentDate.toLocaleDateString()
@@ -62,6 +78,7 @@ searchBtn.addEventListener('click', () => {
             default:
                 weatherImg.src = 'images/clouds.png'
         }
+        }        
     })
     .catch((error) => {
         console.log(error);
