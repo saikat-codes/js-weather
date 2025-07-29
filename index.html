@@ -16,10 +16,10 @@
         <input type="text" name="city-name" id="search-bar" placeholder="Enter City here...">
         <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
-    <div class="container">
-        <h1 class="city-name">Gotham</h1>
-        <h3 class="date">07.04.2012</h3>
-    <img src="images/clouds.png" alt="" class="weather-img">
+    <div class="container none">
+        <h1 class="city-name"> </h1>
+        <h3 class="date"> </h3>
+    <img src="#" alt="" class="weather-img">
         <div class="temp-box">
             <h1 class="temp">28</h1><span>°C</span>
         </div>
@@ -29,7 +29,7 @@
                 <i class="fa-solid fa-water"></i>
                 <div class="humidity-data">
                     <span>
-                        <h4 class="humidity-text">62%</h4>
+                        <h4 class="humidity-text">-- %</h4>
                     <p>Humidity</p>
                     </span>
                 </div>
@@ -37,13 +37,17 @@
             <div class="wind-speed">
                 <i class="fa-solid fa-wind"></i>
                 <span class="wind-speed-data">
-                    <h4 class="wind-speed-text">13Km/h</h4>
+                    <h4 class="wind-speed-text">-- Km/h</h4>
                 <p>Wind Speed</p>
                 </span>
             </div>
         </div>
-
-
+    </div>
+    <div class="error-box hide">
+        <img src="images/error-new.png" alt="error">
+        <h2>Oops!</h2>
+        <h3>Location not found.</h3>
+        <p> Search something else...</p>
     </div>
     <footer>
         <span><p class="foot">made with❤️by <a href="https://www.linkedin.com/in/saikat-das-698a5b2a2/" target="_blank">@saikat</a></p></span>

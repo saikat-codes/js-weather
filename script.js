@@ -5,15 +5,31 @@ const weatherImg = document.querySelector('.weather-img')
 
 searchBtn.addEventListener('click', () => {
     const cityName = document.querySelector("#search-bar").value
+    const container = document.querySelector('.container');
+    const input = document.getElementById('search-bar');
+    const errorBox = document.querySelector('.error-box');
+
+    input.placeholder = cityName; 
+
+    
+
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
     .then((response) => {
-        if (response.status !== 200) {
-        throw new Error("Something went wrong on API server!");
+
+        if (response.status === 404 || response.status === 400) {
+        errorBox.classList.remove('hide');
+        container.classList.add('none');
+        } else {
+         container.classList.remove('none');
+         errorBox.classList.add('hide')
         }
+        console.log(response);
+        
         return response.json();
     })
     .then((response) => {
-        console.log(response);
+
+        // console.log(response);
         let date = +response.dt;
         const currentDate = new Date( date * 1000);        
         
@@ -50,5 +66,6 @@ searchBtn.addEventListener('click', () => {
     .catch((error) => {
         console.log(error);
     });
-  
+   document.querySelector("#search-bar").value = ""
+   
 })

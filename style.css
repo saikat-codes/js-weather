@@ -11,13 +11,13 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url('images/background.png');
+    height: 100vh;
+    width: 100vw;
 }
 
 .search-box {
     display: flex;
     width: 350px;
-    margin-top: 12vh;
-    margin-bottom: 35px;
     align-items: center;
 }
 
@@ -28,6 +28,7 @@ body {
     font-size: 18px;
     padding: 7px;
     background-color: rgba(29, 28, 28, 0.077);
+    backdrop-filter: blur(10px); 
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.079);
     padding-left: 28px;
@@ -37,14 +38,11 @@ body {
     font-weight: 600;
 }
 
-#search-bar::placeholder {
-    text-transform: capitalize;
-}
-
 .fa-location-dot {
     position: relative;
     left: 26px;
     color: #f1f1f1d0;
+    z-index: 100;
 }
 
 .search-btn {
@@ -71,6 +69,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;  
+    margin-top: 1.5em;
+    z-index: 1000;
 }
 
 .city-name {
@@ -189,7 +189,7 @@ body {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 10px;
 }
 
@@ -245,4 +245,44 @@ footer span p a:hover {
     outline: none;
 }
 
+}
+
+.none, .hide {
+    visibility: collapse;
+}
+
+.error-box {
+    background: rgba(29, 28, 28, 0.077);
+    backdrop-filter: blur(10px); 
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.079);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 1.5em;
+    z-index: 1000;
+}
+
+
+.error-box img {
+    width: 350px;
+}
+
+.error-box h2 {
+    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.error-box h3 {
+    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.error-box p {
+    font-family: 'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 2.5em;
 }
