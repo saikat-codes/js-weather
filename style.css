@@ -17,13 +17,14 @@ body {
 
 .search-box {
     display: flex;
-    width: 375px;
-    align-items: center;
+    width: 490px;
+    align-items: center;    
 }
 
 #search-bar {
     width: 100%;
     position: relative;
+    left: 5px;
     font-family: 'Jetbrains Mono','Courier New', Courier, monospace;
     font-size: 18px;
     padding: 8px;
@@ -36,11 +37,17 @@ body {
     padding-right: 35px;
     text-transform: uppercase;
     font-weight: 600;
+    box-shadow: 7px 10px 20px rgba(9, 9, 9, 0.647);
+}
+
+#search-bar:focus {
+  box-shadow: 0 4px 16px rgba(33,150,243,0.16);
+  border-color: #2196f3;
 }
 
 .fa-location-dot {
     position: relative;
-    left: 26px;
+    left: 32px;
     color: #f1f1f1d0;
     z-index: 100;
 }
@@ -56,7 +63,7 @@ body {
 }
 
 .search-btn:active {
-    transform: scale(1.02);
+    transform: scale(1.2);
 }
 
 .container {
@@ -64,13 +71,14 @@ body {
     backdrop-filter: blur(10px); 
     width: 450px;
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.079);
+    border: 3px solid rgba(255, 255, 255, 0.079);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;  
     margin-top: 1.5em;
     z-index: 1000;
+    box-shadow: 7px 10px 20px rgba(9, 9, 9, 0.647);
 }
 
 .city-name {
@@ -261,42 +269,4 @@ footer span p a:hover {
 
 .none, .hide {
     visibility: collapse;
-}
-
-.error-box {
-    background: rgba(29, 28, 28, 0.077);
-    backdrop-filter: blur(10px); 
-    padding: 2em;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.079);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-    margin-top: 1.5em;
-    z-index: 1000;
-    position: absolute;
-    top: 355px;
-}
-
-
-.error-box img {
-    width: 350px;
-}
-
-.error-box h2 {
-    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-}
-
-.error-box h3 {
-    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-}
-
-.error-box p {
-    font-family: 'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    margin-top: 2.5em;
 }
