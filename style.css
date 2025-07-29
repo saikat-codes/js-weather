@@ -243,7 +243,11 @@ footer span p a:hover {
     border: none;
     cursor: pointer;
     outline: none;
-}
+    }
+
+    .error-box {
+    width: 96vw;
+    }
 
 }
 
