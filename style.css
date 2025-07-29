@@ -79,7 +79,6 @@ body {
     font-weight: 550;
     margin-top: 10px;
     text-transform: capitalize;
-    text-decoration: none;
 }
 
 .date {
@@ -175,7 +174,7 @@ body {
 
 .wind-speed i {
     font-size: 45px;
-    padding-right: 55px;
+    padding-right: 65px;
 }
 
 .wind-speed-data {
@@ -190,7 +189,7 @@ body {
 
 footer {
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
 }
 
 footer span p {
