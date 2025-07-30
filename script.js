@@ -16,12 +16,8 @@ searchBtn.addEventListener('click', () => {
     .then((response) => {
 
         container.classList.remove('none')
-        // if (response.status === 404 || response.status === 400) {
-          
-        // } else {
-         
-        // }
-        console.log(response);
+        container.style.height = "570px";
+        // console.log(response);
         
         return response.json();
     })
@@ -38,9 +34,6 @@ searchBtn.addEventListener('click', () => {
             document.querySelector('.date').innerHTML = ''
             document.querySelector('.humidity-text').innerHTML = '--%'
             document.querySelector('.wind-speed-text').innerHTML = '-- Km/h'
-
-
-
 
 
         } else {

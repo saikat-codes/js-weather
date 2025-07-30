@@ -79,6 +79,9 @@ body {
     margin-top: 1.5em;
     z-index: 1000;
     box-shadow: 7px 10px 20px rgba(9, 9, 9, 0.647);
+    height: 300px;
+    transition: height 0.6s ease;
+    overflow: hidden;
 }
 
 .city-name {
@@ -244,6 +247,7 @@ footer span p a:hover {
     #search-bar {
         width: 95vw;
         margin-right: -12px;
+        margin-left: -12px;
     }
 
     .container {
@@ -252,8 +256,8 @@ footer span p a:hover {
 
     .search-btn {
     position: relative;
-    right: 23px;
-    top: -1px;
+    right: 18px;
+    top: 0.5px;
     font-size: 22px;
     background-color: transparent;
     border: none;
@@ -261,12 +265,13 @@ footer span p a:hover {
     outline: none;
     }
 
-    .error-box {
-    width: 96vw;
+    .fa-location-dot {
+    position: relative;
+    left: 20px;
     }
 
 }
 
-.none, .hide {
+.none {
     visibility: collapse;
 }
