@@ -79,8 +79,8 @@ body {
     margin-top: 1.5em;
     z-index: 1000;
     box-shadow: 7px 10px 20px rgba(9, 9, 9, 0.647);
-    height: 300px;
-    transition: height 0.6s ease;
+    height: 10px;
+    transition: height 0.8s ease;
     overflow: hidden;
 }
 
