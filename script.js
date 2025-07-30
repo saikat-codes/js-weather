@@ -7,7 +7,10 @@ searchBtn.addEventListener('click', () => {
     const container = document.querySelector('.container');
     const input = document.getElementById('search-bar');
     
-    input.placeholder = cityName; 
+    input.placeholder = cityName;
+    container.classList.remove('fade-animate');
+    void container.offsetWidth;
+    container.classList.add('fade-animate'); 
     
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)

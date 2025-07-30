@@ -38,6 +38,7 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 7px 10px 20px rgba(9, 9, 9, 0.647);
+    z-index: 100;
 }
 
 #search-bar:focus {
@@ -49,7 +50,7 @@ body {
     position: relative;
     left: 32px;
     color: #f1f1f1d0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .search-btn {
@@ -59,6 +60,7 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 1000;
     outline: none;
 }
 
@@ -77,7 +79,7 @@ body {
     align-items: center;
     justify-content: center;  
     margin-top: 1.5em;
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 7px 10px 20px rgba(9, 9, 9, 0.647);
     height: 10px;
     transition: height 0.8s ease;
@@ -95,7 +97,7 @@ body {
   }
 }
 
-.container:not(.none) > * {
+.container.fade-animate > * {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 0.5s;
@@ -104,16 +106,16 @@ body {
   animation-delay: 0.5s;
 }
 
-.container > *:nth-child(1) { animation-delay: 0.6s; }
-.container > *:nth-child(2) { animation-delay: 1s; }
-.container > *:nth-child(3) { animation-delay: 1.2s; }
-.container > *:nth-child(4) { animation-delay: 1.4s; }
-.container > *:nth-child(5) { animation-delay: 1.6s; }
-.container > *:nth-child(6) { animation-delay: 1.8s; }
-.container > *:nth-child(7) { animation-delay: 2s; }
-.container > *:nth-child(8) { animation-delay: 2s; }
-.container > *:nth-child(9) { animation-delay: 2s; }
-.container > *:nth-child(10) { animation-delay: 2s; }
+.container.fade-animate > *:nth-child(1) { animation-delay: 0.4s; }
+.container.fade-animate > *:nth-child(2) { animation-delay: .6s; }
+.container.fade-animate > *:nth-child(3) { animation-delay: .8s; }
+.container.fade-animate > *:nth-child(4) { animation-delay: 1s; }
+.container.fade-animate > *:nth-child(5) { animation-delay: 1.2s; }
+.container.fade-animate > *:nth-child(6) { animation-delay: 1.4s; }
+.container.fade-animate > *:nth-child(7) { animation-delay: 1.6s; }
+.container.fade-animate > *:nth-child(8) { animation-delay: 1.8s; }
+.container.fade-animate > *:nth-child(9) { animation-delay: 1.8s; }
+.container.fade-animate > *:nth-child(10) { animation-delay: 1.8s; }
 
 
 
@@ -280,7 +282,7 @@ footer span p a:hover {
     #search-bar {
         width: 95vw;
         margin-right: -12px;
-        margin-left: -12px;
+        margin-left: -15px;
     }
 
     .container {
@@ -300,7 +302,7 @@ footer span p a:hover {
 
     .fa-location-dot {
     position: relative;
-    left: 20px;
+    left: 16px;
     }
 
 }
