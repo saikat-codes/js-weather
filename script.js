@@ -1,9 +1,17 @@
 const apiKey = 'da9230bd97fb338a43a5fd7d86cd2c5b'
 const searchBtn = document.querySelector('.search-btn')
 const weatherImg = document.querySelector('.weather-img')
+let cityName = document.querySelector("#search-bar")
 
-searchBtn.addEventListener('click', () => {
-    const cityName = document.querySelector("#search-bar").value
+searchBtn.addEventListener('click', runApp)
+cityName.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        runApp();
+    }
+});
+
+function runApp() {
+    let cityName = document.querySelector("#search-bar").value
     const container = document.querySelector('.container');
     const input = document.getElementById('search-bar');
     
@@ -79,4 +87,4 @@ searchBtn.addEventListener('click', () => {
     });
    document.querySelector("#search-bar").value = ""
    
-})
+}

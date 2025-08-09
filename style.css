@@ -29,7 +29,7 @@ body {
     font-size: 18px;
     padding: 8px;
     background-color: rgba(29, 28, 28, 0.077);
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(20px); 
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.079);
     padding-left: 28px;
