@@ -7,6 +7,7 @@ searchBtn.addEventListener('click', runApp)
 cityName.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         runApp();
+        cityName.blur();
     }
 });
 
