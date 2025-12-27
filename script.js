@@ -1,4 +1,4 @@
-const apiKey = 'da9230bd97fb338a43a5fd7d86cd2c5b'
+const apiKey = 'YOUR_API_KEY_HERE'
 const searchBtn = document.querySelector('.search-btn')
 const weatherImg = document.querySelector('.weather-img')
 let cityName = document.querySelector("#search-bar")
