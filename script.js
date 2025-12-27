@@ -6,6 +6,9 @@ let cityName = document.querySelector("#search-bar")
 searchBtn.addEventListener('click', runApp)
 cityName.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
+        if (cityName.value.endsWith(" ")) {
+            cityName.value = cityName.value.slice(0,-1);
+        } 
         runApp();
         cityName.blur();
     }
@@ -85,7 +88,8 @@ function runApp() {
     })
     .catch((error) => {
         console.log(error);
+        alert("Error in Weather API, plz wait...");
     });
-   document.querySelector("#search-bar").value = ""
+   document.querySelector("#search-bar").value = "";
    
 }
